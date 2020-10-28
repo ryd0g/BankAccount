@@ -14,10 +14,9 @@ class BankAccount:
         if amount > balance:
             print(f"Insufficient Funds. You have been charged an overdraft fee of $10")
         else:
-            print(f"Amount Withdrawn: ${total}")
+            print(f"Amount Withdrawn: ${amount}. Your balance is ${total}")
 
     def get_balance(self):
-        return self.balance
         print(f"Your balance is ${self.balance}")
     
     def add_interest(self):
@@ -26,7 +25,9 @@ class BankAccount:
 
     def print_receipt(self):
         receipt = [self.full_name, self.account_number, self.routing_number, self.balance]
-        print(receipt)
+        for i in receipt:
+            print(i)
 
 customer_one = BankAccount('Ryan Lee', '29573942', '968473963', 1000)
-customer_one.print_receipt()
+customer_two = BankAccount('Jeff Bezos', '06939531', '206927539', 203000000000)
+customer_three = BankAccount('Donald Trump', '95846212', '235723468', 2500000000)
