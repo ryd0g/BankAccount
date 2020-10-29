@@ -7,14 +7,16 @@ class BankAccount:
 
     def deposit(self, amount):
         total = self.balance + amount
-        print(f"Amount Deposited: ${amount}. Your balance is ${total}")
+        self.balance = total
+        print(f"Amount Deposited: ${amount}. Your new balance is ${self.balance}")
 
     def withdraw(self, amount):
         total = self.balance - amount
-        if amount > balance:
+        self.balance = total
+        if amount > self.balance:
             print(f"Insufficient Funds. You have been charged an overdraft fee of $10")
         else:
-            print(f"Amount Withdrawn: ${amount}. Your balance is ${total}")
+            print(f"Amount Withdrawn: ${amount}. Your new balance is ${self.balance}")
 
     def get_balance(self):
         print(f"Your balance is ${self.balance}")
