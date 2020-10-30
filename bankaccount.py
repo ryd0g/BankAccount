@@ -26,8 +26,8 @@ class BankAccount:
         print(f"Your monthly interest is ${interest}")
 
     def print_receipt(self):
-        receipt = [self.full_name, 'Account Number: ' + str(self.account_number), 
-        'Routing Number: ' + str(self.routing_number), 'Balance: $' + str(self.balance)]
+        receipt = [self.full_name, 'Account No.: ****' + str(self.account_number[-4:]), 
+        'Routing No.: ' + str(self.routing_number), 'Balance: $' + str(self.balance)]
         print('Thank you for using PythonBank!')
         for i in receipt:
             print(i)
