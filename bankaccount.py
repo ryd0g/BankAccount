@@ -1,3 +1,5 @@
+from random import randint
+
 class BankAccount:
     #initializing class properties for BankAccount
     def __init__(self, full_name, account_number, routing_number, balance):
@@ -41,21 +43,60 @@ class BankAccount:
             print(i)
 
 # #first customer demo
-customer_one = BankAccount('Ryan Lee', '29573942', '968473963', 1000)
+customer_one = BankAccount('Ryan Lee', 0, 0, 1000)
+#random generate account number
+def account_num(n):
+    range_start = 10**(n-1)
+    range_end = (10**n) - 1
+    return str(randint(range_start, range_end))
+#random generate routing number
+def routing_num(n):
+    range_start = 10**(n-1)
+    range_end = (10**n) - 1
+    return str(randint(range_start, range_end))
+#initialize account and routing number
+customer_one.account_number = account_num(8)
+customer_one.routing_number = routing_num(9)
 print(f'Good Morning Mr.{customer_one.full_name[5:8]}!\n')
 customer_one.get_balance()
 customer_one.deposit(100)
 customer_one.print_receipt()
 
-# #second customer demo
-customer_two = BankAccount('Jeff Bezos', '06939531', '206927539', 203000000000)
+#second customer demo
+customer_two = BankAccount('Jeff Bezos', 0, 0, 203000000000)
+#random generate account number
+def account_num(n):
+    range_start = 10**(n-1)
+    range_end = (10**n) - 1
+    return str(randint(range_start, range_end))
+#random generate routing number
+def routing_num(n):
+    range_start = 10**(n-1)
+    range_end = (10**n) - 1
+    return str(randint(range_start, range_end))
+#initialize account and routing number
+customer_two.account_number = account_num(8)
+customer_two.routing_number = routing_num(9)
 print(f'Good Afternoon Mr.{customer_two.full_name[5:10]}!\n')
 customer_two.get_balance()
 customer_two.add_interest()
 customer_two.print_receipt()
 
-# #third customer demo
-customer_three = BankAccount('Donald Trump', '95846212', '235723468', 2500000000)
+#third customer demo
+customer_three = BankAccount('Donald Trump', 0, 0, 2500000000)
+#random generate account number
+def account_num(n):
+    range_start = 10**(n-1)
+    range_end = (10**n) - 1
+    return str(randint(range_start, range_end))
+#random generate routing number
+def routing_num(n):
+    range_start = 10**(n-1)
+    range_end = (10**n) - 1
+    return str(randint(range_start, range_end))
+#initialize account and routing number
+customer_three.account_number = account_num(8)
+customer_three.routing_number = routing_num(9)
 print(f'Good Evening Mr.{customer_three.full_name[7:12]}!\n')
 customer_three.get_balance()
 customer_three.withdraw(1000000)
