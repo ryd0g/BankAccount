@@ -47,7 +47,7 @@ class BankAccount:
             print(i)
 
 # #first customer demo
-customer_one = BankAccount('Ryan Lee', 0, 0, 1000)
+customer_one = BankAccount('Ryan Lee', 0, 0, 0)
 #random generate account number
 def account_num(n):
     range_start = 10**(n-1)
@@ -62,13 +62,13 @@ def routing_num(n):
 customer_one.account_number = account_num(8)
 customer_one.routing_number = routing_num(9)
 print(f'Good Morning Mr.{customer_one.full_name[5:8]}!\n')
+customer_one.deposit(1000)
 customer_one.get_balance()
-customer_one.deposit(100)
 customer_one.withdraw(2000)
 customer_one.print_receipt()
 
 # #second customer demo
-customer_two = BankAccount('Jeff Bezos', 0, 0, 203000000000)
+customer_two = BankAccount('Jeff Bezos', 0, 0, 0)
 #random generate account number
 def account_num(n):
     range_start = 10**(n-1)
@@ -83,12 +83,13 @@ def routing_num(n):
 customer_two.account_number = account_num(8)
 customer_two.routing_number = routing_num(9)
 print(f'Good Afternoon Mr.{customer_two.full_name[5:10]}!\n')
+customer_two.deposit(177400000000)
 customer_two.get_balance()
 customer_two.add_interest()
 customer_two.print_receipt()
 
 # #third customer demo
-customer_three = BankAccount('Donald Trump', 0, 0, 2500000000)
+customer_three = BankAccount('Donald Trump', 0, 0, 0)
 #random generate account number
 def account_num(n):
     range_start = 10**(n-1)
@@ -103,6 +104,7 @@ def routing_num(n):
 customer_three.account_number = account_num(8)
 customer_three.routing_number = routing_num(9)
 print(f'Good Evening Mr.{customer_three.full_name[7:12]}!\n')
+customer_three.deposit(2500000000)
 customer_three.get_balance()
 customer_three.withdraw(1000000)
 print("Here's a small loan of a million dollars.\n")
