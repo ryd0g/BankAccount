@@ -40,20 +40,24 @@ class BankAccount:
         for i in receipt:
             print(i)
 
-#first customer demo
+# #first customer demo
 customer_one = BankAccount('Ryan Lee', '29573942', '968473963', 1000)
+print(f'Good Morning Mr.{customer_one.full_name[5:8]}!\n')
 customer_one.get_balance()
 customer_one.deposit(100)
 customer_one.print_receipt()
 
-#second customer demo
+# #second customer demo
 customer_two = BankAccount('Jeff Bezos', '06939531', '206927539', 203000000000)
+print(f'Good Afternoon Mr.{customer_two.full_name[5:10]}!\n')
 customer_two.get_balance()
 customer_two.add_interest()
 customer_two.print_receipt()
 
-#third customer demo
+# #third customer demo
 customer_three = BankAccount('Donald Trump', '95846212', '235723468', 2500000000)
+print(f'Good Evening Mr.{customer_three.full_name[7:12]}!\n')
 customer_three.get_balance()
-print(customer_three.withdraw(1000000) + "Here's a small loan of a million dollars.")
-customer.three.print_receipt()
+customer_three.withdraw(1000000)
+print("Here's a small loan of a million dollars.\n")
+customer_three.print_receipt()
