@@ -20,7 +20,7 @@ class BankAccount:
         self.balance = total
         #if (amount) is > balance, prints overdraft message
         if amount > self.balance:
-            print(f"Insufficient Funds. You have been charged an overdraft fee of $10")
+            print(f"Attempted Withdrawal: ${amount}. Insufficient Funds: You have been charged an overdraft fee of $10")
         else:
             print(f'Amount Withdrawn: ${amount}. Your new balance is ${self.balance}\n')
 
@@ -35,6 +35,9 @@ class BankAccount:
 
     #prints a receipt for the user
     def print_receipt(self):
+        #adds overdraft fee if negative balance
+        if self.balance < 0:
+            self.balance -= 10
         #prints thank you message first, indents, then prints bank account info for user
         receipt = [self.full_name, 'Account No.: ****' + str(self.account_number[-4:]), 
         'Routing No.: ' + str(self.routing_number), 'Balance: $' + str(self.balance)]
@@ -60,9 +63,10 @@ customer_one.routing_number = routing_num(9)
 print(f'Good Morning Mr.{customer_one.full_name[5:8]}!\n')
 customer_one.get_balance()
 customer_one.deposit(100)
+customer_one.withdraw(2000)
 customer_one.print_receipt()
 
-#second customer demo
+# #second customer demo
 customer_two = BankAccount('Jeff Bezos', 0, 0, 203000000000)
 #random generate account number
 def account_num(n):
@@ -82,7 +86,7 @@ customer_two.get_balance()
 customer_two.add_interest()
 customer_two.print_receipt()
 
-#third customer demo
+# #third customer demo
 customer_three = BankAccount('Donald Trump', 0, 0, 2500000000)
 #random generate account number
 def account_num(n):
