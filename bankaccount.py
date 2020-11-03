@@ -1,3 +1,4 @@
+#initialize random module
 from random import randint
 
 class BankAccount:
