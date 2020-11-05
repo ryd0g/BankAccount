@@ -11,14 +11,12 @@ class BankAccount:
 
     #method for deposit (amount), prints statement with new balance
     def deposit(self, amount):
-        total = self.balance + amount
-        self.balance = total
+        self.balance += amount
         print(f'Amount Deposited: ${amount}. Your new balance is ${self.balance}\n')
 
     #method for withdraw (amount), prints statement with new value
     def withdraw(self, amount):
-        total = self.balance - amount
-        self.balance = total
+        self.balance -= amount
         #if (amount) is > balance, prints overdraft message
         if amount > self.balance:
             print(f"Attempted Withdrawal: ${amount}. Insufficient Funds: You have been charged an overdraft fee of $10")
