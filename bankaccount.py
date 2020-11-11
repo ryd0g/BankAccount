@@ -3,6 +3,7 @@ from random import randint
 
 class BankAccount:
     #initializing class properties for BankAccount
+    routing_number = 121000358
     def __init__(self, full_name, account_number, routing_number, balance):
         self.full_name = full_name
         self.account_number = account_number
@@ -60,32 +61,32 @@ customer_one.withdraw(2000)
 customer_one.print_receipt()
 
 # #second customer demo
-customer_two = BankAccount('Jeff Bezos', 0, 121000358, 0)
-#random generate account number
-def account_num(n):
-    range_start = 10**(n-1)
-    range_end = (10**n) - 1
-    return str(randint(range_start, range_end))
-#initialize account and routing number
-customer_two.account_number = account_num(8)
-print(f'Good Afternoon Mr.{customer_two.full_name[5:10]}!\n')
-customer_two.deposit(177400000000)
-customer_two.get_balance()
-customer_two.add_interest()
-customer_two.print_receipt()
+# customer_two = BankAccount('Jeff Bezos', 0, 121000358, 0)
+# #random generate account number
+# def account_num(n):
+#     range_start = 10**(n-1)
+#     range_end = (10**n) - 1
+#     return str(randint(range_start, range_end))
+# #initialize account and routing number
+# customer_two.account_number = account_num(8)
+# print(f'Good Afternoon Mr.{customer_two.full_name[5:10]}!\n')
+# customer_two.deposit(177400000000)
+# customer_two.get_balance()
+# customer_two.add_interest()
+# customer_two.print_receipt()
 
-# #third customer demo
-customer_three = BankAccount('Donald Trump', 0, 121000358, 0)
-#random generate account number
-def account_num(n):
-    range_start = 10**(n-1)
-    range_end = (10**n) - 1
-    return str(randint(range_start, range_end))
-#initialize account and routing number
-customer_three.account_number = account_num(8)
-print(f'Good Evening Mr.{customer_three.full_name[7:12]}!\n')
-customer_three.deposit(2500000000)
-customer_three.get_balance()
-customer_three.withdraw(1000000)
-print("Here's a small loan of a million dollars.\n")
-customer_three.print_receipt()
+# # #third customer demo
+# customer_three = BankAccount('Donald Trump', 0, 121000358, 0)
+# #random generate account number
+# def account_num(n):
+#     range_start = 10**(n-1)
+#     range_end = (10**n) - 1
+#     return str(randint(range_start, range_end))
+# #initialize account and routing number
+# customer_three.account_number = account_num(8)
+# print(f'Good Evening Mr.{customer_three.full_name[7:12]}!\n')
+# customer_three.deposit(2500000000)
+# customer_three.get_balance()
+# customer_three.withdraw(1000000)
+# print("Here's a small loan of a million dollars.\n")
+# customer_three.print_receipt()
