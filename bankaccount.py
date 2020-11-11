@@ -1,6 +1,12 @@
 #initialize random module
 from random import randint
 
+#random generate account number
+def account_num(n):
+    range_start = 10**(n-1)
+    range_end = (10**n) - 1
+    return str(randint(range_start, range_end))
+
 class BankAccount:
     #initializing class properties for BankAccount
     routing_number = 121000358
@@ -47,11 +53,6 @@ class BankAccount:
 
 # #first customer demo
 customer_one = BankAccount('Ryan Lee', 0, 121000358, 0)
-#random generate account number
-def account_num(n):
-    range_start = 10**(n-1)
-    range_end = (10**n) - 1
-    return str(randint(range_start, range_end))
 #initialize account and routing number
 customer_one.account_number = account_num(8)
 print(f'Good Morning Mr.{customer_one.full_name[5:8]}!\n')
@@ -62,11 +63,6 @@ customer_one.print_receipt()
 
 # #second customer demo
 customer_two = BankAccount('Jeff Bezos', 0, 121000358, 0)
-#random generate account number
-def account_num(n):
-    range_start = 10**(n-1)
-    range_end = (10**n) - 1
-    return str(randint(range_start, range_end))
 #initialize account and routing number
 customer_two.account_number = account_num(8)
 print(f'Good Afternoon Mr.{customer_two.full_name[5:10]}!\n')
@@ -77,11 +73,6 @@ customer_two.print_receipt()
 
 # #third customer demo
 customer_three = BankAccount('Donald Trump', 0, 121000358, 0)
-#random generate account number
-def account_num(n):
-    range_start = 10**(n-1)
-    range_end = (10**n) - 1
-    return str(randint(range_start, range_end))
 #initialize account and routing number
 customer_three.account_number = account_num(8)
 print(f'Good Evening Mr.{customer_three.full_name[7:12]}!\n')
